@@ -1,0 +1,16 @@
+Explanation for txt lectures file stucture:
+
+Name , week , type , number , startTime , endTime, RoomNumber, test , homework;
+, = parameter separation
+; = lecture unit separation
+/ = end of file;
+week = 0 - all weeks , 1 - first week , 2 - second week
+type = 0 - lectures, 1 - practise , 2 - labaratory work
+test = 0 - notest , 1 - is test
+homework = 0 - no home , 1 - yes hom;
+
+Example :
+Information system Analysis , 2 , 0 , 4 , 14:30 , 16:05 ,  ER-I 408 , 0 , 0  ;
+Economics, 1 , 1 , 4 , 14:30 , 16:05 ,  ER-I 310 , 0 , 0  ;
+Information system Analysis , 0 , 0 , 5 , 16:20 , 17:55 , ER-I 408 , 0 , 0  ;
+Information system Analysis , 1 , 0 , 6 , 18:10 , 19:45 , ER-I 408 , 0 , 0  /

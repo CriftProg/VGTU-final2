@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">VGTU-final</string>
+
+    <string name="menu_lectures">Lectures</string>
+    <string name="menu_exam">Exams</string>
+    <string name="menu_labs">Labs</string>
+    <string name="menu_options">Options</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_logOut">Log Out</string>
+    <string name="menu_headline">Additional</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="options_menu">Options menu</string>
+    <string name="language">Language</string>
+    <string name="lietuvi">Lietuvių</string>
+    <string name="english">English</string>
+    <string name="notifications">Notifications</string>
+    <string name="lectures">Lectures</string>
+    <string name="exams">Exams</string>
+    <string name="midterms">Midterms</string>
+    <string name="homeworks_labworks">Homeworks/Labworks</string>
+    <string name="technical_support">Technical support</string>
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+    <string name="no_sound">No Sound</string>
+    <string name="notification_settings">Notification settings</string>
+    <string name="log_off">Log off</string>
+
+
+    <string name="dasboard_index">Dashboard</string>
+    <string name="tomorrow_index">Tomorrow</string>
+    <string name="semester_index">Semester</string>
+    <string name="dashboard_currentDay">Monday</string>
+
+    <string name="semester_monday">Monday</string>
+    <string name="semester_tuesday">Monday</string>
+    <string name="semester_wednesday">Monday</string>
+    <string name="semester_thursday">Monday</string>
+    <string name="semester_friday">Monday</string>
+
+
+    <string name="lecture_number">Lecture Number</string>
+    <string name="lecture_time">Time - Time</string>
+    <string name="lecture_name">Lecture Name</string>
+    <string name="lecture_room">Room-Number</string>
+    <string name="lecture_week">Wk. 1</string>
+
+
+
+    <string name="dayOfWeek_1">Monday</string>
+    <string name="dayOfWeek_2">Tuesday</string>
+    <string name="dayOfWeek_3">Wednesday</string>
+    <string name="dayOfWeek_4">Thursday</string>
+    <string name="dayOfWeek_5">Friday</string>
+    <string name="dayOfWeek_6">Saturday</string>
+    <string name="dayOfWeek_7">Sunday</string>
+
+
+
+
+</resources>
+
