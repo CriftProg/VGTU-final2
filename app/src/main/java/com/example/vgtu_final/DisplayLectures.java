@@ -84,7 +84,7 @@ public class DisplayLectures {
     public String getAllData(String table_name){
         Log.i("Button", "getAlldata" );
 
-        String[] columns = {LecturesEntry._ID,LecturesEntry.COLUMN_LECTURE_NAME, LecturesEntry.COLUMN_LECTURE_WEEK, LecturesEntry.};
+        String[] columns = {LecturesEntry._ID,LecturesEntry.COLUMN_LECTURE_NAME, LecturesEntry.COLUMN_LECTURE_WEEK, LecturesEntry.COLUMN_LECTURE_TYPE};
 
         Cursor cursor = db.query(table_name, columns, null,null,null,null,null);
         Log.i("Button", "getAlldata db " + cursor.getCount());
