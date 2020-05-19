@@ -8,6 +8,9 @@
     <string name="menu_help">Help</string>
     <string name="menu_logOut">Log Out</string>
     <string name="menu_headline">Additional</string>
+    <string name="menu_chatbot">Chat</string>
+    <string name="menu_homework">Homework</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -57,6 +60,15 @@
     <string name="dayOfWeek_5">Friday</string>
     <string name="dayOfWeek_6">Saturday</string>
     <string name="dayOfWeek_7">Sunday</string>
+
+
+    <string name="nolecture">No lectures</string>
+
+    <string name="pop_title">Subjcet name</string>
+    <string name="pop_teacher">Subjcet name</string>
+    <string name="pop_addhome">Subjcet name</string>
+    <string name="pop_addtest">Subjcet name</string>
+
 
 
 

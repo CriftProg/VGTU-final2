@@ -9,12 +9,12 @@ import android.support.annotation.Nullable;
 import com.example.vgtu_final.LecturesContract.LecturesEntry;
 
 public class LecturesDBHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "lectureslist.db";
+
     public static final int DATABASE_VERSION = 1;
 
 
     public LecturesDBHelper(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, LecturesEntry.DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override

@@ -16,10 +16,19 @@
             android:id="@+id/nav_labs"
             android:icon="@drawable/ic_labs"
             android:title="@string/menu_labs" />
+
+        <item
+            android:id="@+id/nav_homework"
+            android:icon="@drawable/ic_homework"
+            android:title="@string/menu_homework" />
         <item
             android:id="@+id/nav_options"
             android:icon="@drawable/ic_options"
             android:title="@string/menu_options" />
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chatbot"
+            android:title="@string/menu_chatbot" />
     </group>
     <item android:title="@string/menu_headline">
         <menu>

@@ -7,41 +7,71 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/dashboard_index"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dashboard_indexTop"
         android:text="@string/tomorrow_index"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="28dp"
         tools:ignore="MissingConstraints" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout_Lecture1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+    <TextView
+        android:id="@id/dashboard_currentDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/dashboard_currentDay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@id/dashboard_index" />
+
+    <TextView
+        android:id="@+id/dashboard_nolecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/nolecture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashboard_index"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@id/frameLayout_lecture1_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lecture_height"
+        android:layout_marginTop="@dimen/lecture_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashboard_currentDay">
 
         <ImageButton
-            android:id="@+id/button_popOutLecture"
+            android:id="@id/button_lecture1_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="TODO"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            tools:srcCompat="@android:color/darker_gray"
             tools:visibility="visible" />
 
         <ImageView
-            android:id="@+id/view_lectureBackground"
+            android:id="@+id/view_lectureBackground1_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"
             app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
-            android:id="@+id/view_homework"
+            android:id="@id/view_homework1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -50,7 +80,7 @@
             app:srcCompat="?android:attr/alertDialogIcon" />
 
         <ImageView
-            android:id="@+id/view_test"
+            android:id="@id/view_test1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -60,7 +90,7 @@
 
 
         <TextView
-            android:id="@+id/text_lectureRoom"
+            android:id="@id/text_lectureRoom1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -68,7 +98,7 @@
             android:text="@string/lecture_room" />
 
         <TextView
-            android:id="@+id/text_lectureNumber"
+            android:id="@id/text_lectureNumber1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -76,7 +106,7 @@
             android:text="@string/lecture_number" />
 
         <TextView
-            android:id="@+id/text_lectureName"
+            android:id="@+id/text_lectureName1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -84,26 +114,36 @@
             android:text="@string/lecture_name" />
 
         <TextView
-            android:id="@+id/text_lectureTime"
+            android:id="@+id/text_lectureTime1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@id/text_Week1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
 
 
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout_Lecture2"
+        android:id="@+id/frameLayout_Lecture2_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture1">
+        app:layout_constraintTop_toBottomOf="@id/frameLayout_lecture1_1">
 
         <ImageButton
-            android:id="@+id/button_popOutLecture2"
+            android:id="@+id/button_popOutLecture2_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="TODO"
@@ -111,14 +151,14 @@
             tools:visibility="visible" />
 
         <ImageView
-            android:id="@+id/view_lectureBackground2"
+            android:id="@+id/view_lectureBackground2_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"
             app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
-            android:id="@+id/view_homework2"
+            android:id="@+id/view_homework2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -127,7 +167,7 @@
             app:srcCompat="?android:attr/alertDialogIcon" />
 
         <ImageView
-            android:id="@+id/view_test2"
+            android:id="@+id/view_test2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -137,7 +177,7 @@
 
 
         <TextView
-            android:id="@+id/text_lectureRoom2"
+            android:id="@+id/text_lectureRoom2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -145,7 +185,7 @@
             android:text="@string/lecture_room" />
 
         <TextView
-            android:id="@+id/text_lectureNumber2"
+            android:id="@+id/text_lectureNumber2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -153,7 +193,7 @@
             android:text="@string/lecture_number" />
 
         <TextView
-            android:id="@+id/text_lectureName2"
+            android:id="@+id/text_lectureName2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -161,26 +201,38 @@
             android:text="@string/lecture_name" />
 
         <TextView
-            android:id="@+id/text_lectureTime2"
+            android:id="@+id/text_lectureTime2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@id/text_Week2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
+
+
 
 
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout_Lecture3"
+        android:id="@+id/frameLayout_Lecture3_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture2">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture2_1">
 
         <ImageButton
-            android:id="@+id/button_popOutLecture3"
+            android:id="@+id/button_popOutLecture3_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="TODO"
@@ -188,14 +240,14 @@
             tools:visibility="visible" />
 
         <ImageView
-            android:id="@+id/view_lectureBackground3"
+            android:id="@+id/view_lectureBackground3_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"
             app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
-            android:id="@+id/view_homework3"
+            android:id="@+id/view_homework3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -204,7 +256,7 @@
             app:srcCompat="?android:attr/alertDialogIcon" />
 
         <ImageView
-            android:id="@+id/view_test3"
+            android:id="@+id/view_test3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -214,7 +266,7 @@
 
 
         <TextView
-            android:id="@+id/text_lectureRoom3"
+            android:id="@+id/text_lectureRoom3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -222,7 +274,7 @@
             android:text="@string/lecture_room" />
 
         <TextView
-            android:id="@+id/text_lectureNumber3"
+            android:id="@+id/text_lectureNumber3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -230,7 +282,7 @@
             android:text="@string/lecture_number" />
 
         <TextView
-            android:id="@+id/text_lectureName3"
+            android:id="@+id/text_lectureName3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -238,26 +290,36 @@
             android:text="@string/lecture_name" />
 
         <TextView
-            android:id="@+id/text_lectureTime3"
+            android:id="@+id/text_lectureTime3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@id/text_Week3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
 
 
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout_Lecture4"
+        android:id="@+id/frameLayout_Lecture4_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture3">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture3_1">
 
         <ImageButton
-            android:id="@+id/button_popOutLecture4"
+            android:id="@+id/button_popOutLecture4_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="TODO"
@@ -265,14 +327,14 @@
             tools:visibility="visible" />
 
         <ImageView
-            android:id="@+id/view_lectureBackground4"
+            android:id="@+id/view_lectureBackground4_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"
             app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
-            android:id="@+id/view_homework4"
+            android:id="@+id/view_homework4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -281,7 +343,7 @@
             app:srcCompat="?android:attr/alertDialogIcon" />
 
         <ImageView
-            android:id="@+id/view_test4"
+            android:id="@+id/view_test4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -291,7 +353,7 @@
 
 
         <TextView
-            android:id="@+id/text_lectureRoom4"
+            android:id="@+id/text_lectureRoom4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -299,7 +361,7 @@
             android:text="@string/lecture_room" />
 
         <TextView
-            android:id="@+id/text_lectureNumber4"
+            android:id="@+id/text_lectureNumber4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -307,7 +369,7 @@
             android:text="@string/lecture_number" />
 
         <TextView
-            android:id="@+id/text_lectureName4"
+            android:id="@+id/text_lectureName4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -315,11 +377,198 @@
             android:text="@string/lecture_name" />
 
         <TextView
-            android:id="@+id/text_lectureTime4"
+            android:id="@+id/text_lectureTime4_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@id/text_Week4_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_Lecture5_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture4_1">
+
+        <ImageButton
+            android:id="@+id/button_popOutLecture5_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/view_lectureBackground5_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:srcCompat="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/view_homework5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="?android:attr/alertDialogIcon" />
+
+        <ImageView
+            android:id="@+id/view_test5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="45dp"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+
+        <TextView
+            android:id="@+id/text_lectureRoom5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:text="@string/lecture_room" />
+
+        <TextView
+            android:id="@+id/text_lectureNumber5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lecture_number" />
+
+        <TextView
+            android:id="@+id/text_lectureName5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lecture_name" />
+
+        <TextView
+            android:id="@+id/text_lectureTime5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@+id/text_Week5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_Lecture6_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout_Lecture5_1">
+
+        <ImageButton
+            android:id="@+id/button_popOutLecture6_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/view_lectureBackground6_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:srcCompat="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/view_homework6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="?android:attr/alertDialogIcon" />
+
+        <ImageView
+            android:id="@+id/view_test6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="45dp"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+
+        <TextView
+            android:id="@+id/text_lectureRoom6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:text="@string/lecture_room" />
+
+        <TextView
+            android:id="@+id/text_lectureNumber6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lecture_number" />
+
+        <TextView
+            android:id="@+id/text_lectureName6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lecture_name" />
+
+        <TextView
+            android:id="@+id/text_lectureTime6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/lecture_time" />
+
+        <TextView
+            android:id="@+id/text_Week6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="190dp"/>
+
 
 
     </FrameLayout>

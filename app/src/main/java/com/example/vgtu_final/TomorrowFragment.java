@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 public class TomorrowFragment extends Fragment {
     private Activity context;
-    SwipeFunction swipe;
+
+    DisplayLectures displayLectures;
 
 
     @Nullable
@@ -24,18 +25,21 @@ public class TomorrowFragment extends Fragment {
         final FragmentTransaction transaction_right = fragmentManager.beginTransaction();
         final FragmentTransaction transaction_left = fragmentManager.beginTransaction();
         transaction_right.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right);
+        transaction_left.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
 
         final View rootView = inflater.inflate(R.layout.fragment_tomorrow, container, false);
 
         rootView.setOnTouchListener(new OnSwipeTouchListener(context) {
 
             public void onSwipeRight() {
-                Toast.makeText(context, "right", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "right", Toast.LENGTH_SHORT).show();
                 transaction_right.replace(R.id.fragment_container,
                         new LecturesFragment()).commit();
             }
             public void onSwipeLeft() {
-                Toast.makeText(context, "left", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "left", Toast.LENGTH_SHORT).show();
+                transaction_left.replace(R.id.fragment_container,
+                        new SemesterFragment()).commit();
 
             }
 
@@ -43,6 +47,9 @@ public class TomorrowFragment extends Fragment {
 
 
         });
+
+        displayLectures = new DisplayLectures(getContext());
+        displayLectures.TomorrowLecture(rootView);
 
         return  rootView;
     }

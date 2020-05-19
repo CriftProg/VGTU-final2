@@ -16,13 +16,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 public class LecturesFragment extends Fragment   {
     private Activity context;
-    SwipeFunction swipe;
+
     DisplayLectures displayLectures;
 
 
@@ -53,10 +54,20 @@ public class LecturesFragment extends Fragment   {
         displayLectures = new DisplayLectures(getContext());
         displayLectures.TodayLecture(rootView);
 
-
+        pops(rootView);
 
 
         return  rootView;
+    }
+
+    public void pops(View rootView){
+        ImageButton b = (ImageButton) rootView.findViewById(R.id.button_lecture1_1);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context,Pop.class));
+            }
+        });
     }
 
 

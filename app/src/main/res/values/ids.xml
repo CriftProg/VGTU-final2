@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <fraction name="dd">
+        <item type="id" name = "dashboard"/>
+    </fraction>
     <item type="id" name="dashboard_index" />
     <item type="id" name="dashboard_currentDay" />
 

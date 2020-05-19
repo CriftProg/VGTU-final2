@@ -48,6 +48,8 @@ public class LecturesContract extends AppCompatActivity {
         public static final String COLUMN_SUBJECT_TEST = "subject_group";
         public static final String COLUMN_SUBJECT_HOMEWORK = "subject_homework";
 
+        public static final String DATABASE_NAME = "lectureslist.db";
+
 
 
 

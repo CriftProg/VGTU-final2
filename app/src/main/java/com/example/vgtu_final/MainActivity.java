@@ -84,6 +84,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_logout:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_chat:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ChatFragment()).commit();
+                break;
+            case R.id.nav_homework:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new HomeworkFragment()).commit();
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

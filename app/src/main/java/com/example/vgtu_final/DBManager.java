@@ -47,7 +47,10 @@ public class DBManager {
 
     public void fillDB_lectures(String[][] array_lectureparams, int array_length, SQLiteDatabase mDatabase, String tablename) {
 
-
+        if(array_lectureparams[0][1] == null){
+            Log.i("Button","LLLLLOOL");
+            return;
+        }
 
 
 
