@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="dd">
+        <item type="id" name = "dashboard"/>
+    </fraction>
+    <item type="id" name="dashboard_index" />
+    <item type="id" name="dashboard_currentDay" />
+
+    <item type="id" name="frameLayout_lecture1_1" />
+    <item type="id" name="frameLayout_lecture2_1" />
+    <item type="id" name="frameLayout_lecture3_1" />
+    <item type="id" name="frameLayout_lecture4_1" />
+
+    <item type="id" name="button_lecture1_1" />
+    <item type="id" name="button_lecture2_1" />
+    <item type="id" name="button_lecture3_1" />
+    <item type="id" name="button_lecture4_1" />
+
+    <item type="id" name="view_LectureBackground1_1" />
+    <item type="id" name="view_LectureBackground2_1" />
+    <item type="id" name="view_LectureBackground3_1" />
+    <item type="id" name="view_LectureBackground4_1" />
+
+    <item type="id" name="view_homework1_1" />
+    <item type="id" name="view_homework2_1" />
+    <item type="id" name="view_homework3_1" />
+    <item type="id" name="view_homework4_1" />
+
+    <item type="id" name="view_test1_1" />
+    <item type="id" name="view_test2_1" />
+    <item type="id" name="view_test3_1" />
+    <item type="id" name="view_test4_1" />
+
+    <item type="id" name="text_lectureNumber1_1" />
+    <item type="id" name="text_lectureNumber2_1" />
+    <item type="id" name="text_lectureNumber3_1" />
+    <item type="id" name="text_lectureNumber4_1" />
+
+    <item type="id" name="text_lectureRoom1_1" />
+    <item type="id" name="text_lectureRoom2_1" />
+    <item type="id" name="text_lectureRoom3_1" />
+    <item type="id" name="text_lectureRoom4_1" />
+
+    <item type="id" name="text_Week1_1" />
+    <item type="id" name="text_Week2_1" />
+    <item type="id" name="text_Week3_1" />
+    <item type="id" name="text_Week4_1" />
+
+
+    <item type="id" name="header_userName"/>
+    <item type="id" name="header_userStatus"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

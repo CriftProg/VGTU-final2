@@ -17,21 +17,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
-    <string name="options_menu">Options menu</string>
-    <string name="language">Language</string>
-    <string name="lietuvi">Lietuvių</string>
-    <string name="english">English</string>
-    <string name="notifications">Notifications</string>
-    <string name="lectures">Lectures</string>
-    <string name="exams">Exams</string>
-    <string name="midterms">Midterms</string>
-    <string name="homeworks_labworks">Homeworks/Labworks</string>
-    <string name="technical_support">Technical support</string>
-    <string name="sound">Sound</string>
-    <string name="vibration">Vibration</string>
-    <string name="no_sound">No Sound</string>
-    <string name="notification_settings">Notification settings</string>
-    <string name="log_off">Log off</string>
+
 
 
     <string name="dasboard_index">Dashboard</string>
@@ -77,7 +63,6 @@
 
 
 
-
     <string name="pop_info">Info</string>
 
 
@@ -90,6 +75,26 @@
     <string name="log_in">Log In</string>
     <string name="password">Password</string>
     <string name="submit">Enter</string>
+
+
+
+
+    <string name="options_menu">Nustatymai</string>
+    <string name="language">Kalba</string>
+    <string name="lietuvi">Lietuvių</string>
+    <string name="english">English</string>
+    <string name="notifications">Priminimai</string>
+    <string name="lectures">Paskaitos</string>
+    <string name="exams">Egzaminai</string>
+    <string name="midterms">Kontroliniai darbai</string>
+    <string name="homeworks_labworks">Namų/Laboratoriniai darbai</string>
+    <string name="technical_support">Techninė pagalba</string>
+    <string name="sound">Garsas</string>
+    <string name="vibration">Vibracija</string>
+    <string name="no_sound">Be garso</string>
+    <string name="notification_settings">Priminimų nustatymai</string>
+    <string name="log_off">Atsijungti</string>
+
 
 
 </resources>

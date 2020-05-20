@@ -17,6 +17,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     NavigationBar bar;
 
+    DBManager manager;
+    CallBack callBack;
+
+
     private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         //bar = new NavigationBar(this);
 
+        manager = new DBManager(this);
+
+
+
+        callBack = new CallBack();
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -82,7 +91,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //this.startActivity(intent);
                 break;
             case R.id.nav_logout:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Exit", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,LoginActivity.class));
                 break;
             case R.id.nav_chat:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -92,6 +102,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeworkFragment()).commit();
                 break;
+            case R.id.nav_results:
+
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

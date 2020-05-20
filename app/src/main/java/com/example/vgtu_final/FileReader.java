@@ -13,9 +13,10 @@ import java.util.Scanner;
 public class FileReader {
 
 
-    String filename2 = "mondaylec.txt";
+
     private Context context;
     public int array_size;
+
 
     static Scanner scan;
 
@@ -74,38 +75,9 @@ public class FileReader {
         return array_lectureparams;
     }
 
-    public void fillDB_lectures(String[][] array_lectureparams, int array_length, SQLiteDatabase mDatabase, String tablename) {
 
 
-        ContentValues cv = new ContentValues();
 
-
-        //Log.i("Button", "length " + array_lectureparams[0].length);
-        for (int i = 0; i < array_length; i++) {
-
-
-            String name = array_lectureparams[i][0].trim();
-            int week = Integer.parseInt(array_lectureparams[i][1].trim());
-            int type = Integer.parseInt(array_lectureparams[i][2].trim());
-            int number = Integer.parseInt(array_lectureparams[i][3].trim());
-            String st_time = array_lectureparams[i][4].trim();
-            String end_time = array_lectureparams[i][5].trim();
-            String room = array_lectureparams[i][6].trim();
-            int homework = Integer.parseInt(array_lectureparams[i][7].trim());
-            int test = Integer.parseInt(array_lectureparams[i][8].trim());
-
-            // Log.i("Button", "name " + room);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_NAME, name);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_WEEK, week);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_TYPE, type);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_START, st_time);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_END, end_time);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_ROOM, room);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_HOMEWORK, homework);
-            cv.put(LecturesContract.LecturesEntry.COLUMN_LECTURE_TEST, test);
-        }
-        mDatabase.insert(tablename, null, cv);
-    }
 
     public static void fileExists(File myObj){
         if (myObj.exists()) {

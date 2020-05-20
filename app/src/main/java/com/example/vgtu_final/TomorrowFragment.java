@@ -15,7 +15,22 @@ public class TomorrowFragment extends Fragment {
     private Activity context;
 
     DisplayLectures displayLectures;
+    LecturesDBHelper helperDb;
 
+    Pop pop;
+
+    int [] pop_button = {R.id.button_popOutLecture1_1,
+            R.id.button_popOutLecture2_1,
+            R.id.button_popOutLecture3_1,
+            R.id.button_popOutLecture4_1,
+            R.id.button_popOutLecture5_1,
+            R.id.button_popOutLecture6_1};
+    int [] lecture_names = {R.id.text_lectureName1_1,
+            R.id.text_lectureName2_1,
+            R.id.text_lectureName3_1,
+            R.id.text_lectureName4_1,
+            R.id.text_lectureName5_1,
+            R.id.text_lectureName6_1};
 
     @Nullable
     @Override
@@ -48,8 +63,17 @@ public class TomorrowFragment extends Fragment {
 
         });
 
-        displayLectures = new DisplayLectures(getContext());
+        helperDb = new LecturesDBHelper(context);
+
+        displayLectures = new DisplayLectures(getContext(), helperDb.getReadableDatabase());
         displayLectures.TomorrowLecture(rootView);
+
+
+        pop = new Pop();
+
+        for(int i = 0; i< pop_button.length ; i++){
+            pop.openPop(rootView,context,pop_button[i],lecture_names[i]);
+        }
 
         return  rootView;
     }

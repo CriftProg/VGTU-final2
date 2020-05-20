@@ -17,14 +17,33 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+
+import java.nio.Buffer;
 
 public class LecturesFragment extends Fragment   {
     private Activity context;
 
     DisplayLectures displayLectures;
+    LecturesDBHelper dbHelper;
+    String caller;
+
+    int [] pop_button = {R.id.button_popOutLecture1_1,
+            R.id.button_popOutLecture2_1,
+            R.id.button_popOutLecture3_1,
+            R.id.button_popOutLecture4_1,
+            R.id.button_popOutLecture5_1,
+            R.id.button_popOutLecture6_1};
+    int [] lecture_names = {R.id.text_lectureName1_1,
+            R.id.text_lectureName2_1,
+            R.id.text_lectureName3_1,
+            R.id.text_lectureName4_1,
+            R.id.text_lectureName5_1,
+            R.id.text_lectureName6_1};
+    Pop pop;
 
 
     @Nullable
@@ -51,24 +70,28 @@ public class LecturesFragment extends Fragment   {
 
         });
 
-        displayLectures = new DisplayLectures(getContext());
+        dbHelper = new LecturesDBHelper(context);
+
+        displayLectures = new DisplayLectures(getContext(), dbHelper.getReadableDatabase());
         displayLectures.TodayLecture(rootView);
 
-        pops(rootView);
+
+        pop = new Pop();
+
+        for(int i = 0; i< pop_button.length ; i++){
+            pop.openPop(rootView,context,pop_button[i],lecture_names[i]);
+
+        }
 
 
         return  rootView;
     }
 
-    public void pops(View rootView){
-        ImageButton b = (ImageButton) rootView.findViewById(R.id.button_lecture1_1);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context,Pop.class));
-            }
-        });
+
+
     }
 
 
-}
+
+
+

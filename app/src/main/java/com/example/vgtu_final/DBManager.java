@@ -16,17 +16,19 @@ public class DBManager {
             "wednesdaylec.txt",
             "thursdaylec.txt",
             "fridaylec.txt"};
+    private String subject_file = "lectures.txt";
+    private String login_file = "account.txt";
     private String[] lecture_table_names = {LecturesEntry.TABLE_NAME_MONDAY, LecturesEntry.TABLE_NAME_TUESDAY,
             LecturesEntry.TABLE_NAME_WEDNESDAY, LecturesEntry.TABLE_NAME_THURSDAY, LecturesEntry.TABLE_NAME_FRIDAY};
 
     DBManager(Context context) {
-
+        context.deleteDatabase(LecturesEntry.DATABASE_NAME);
         dbHelper = new LecturesDBHelper(context);
         mDatabase = dbHelper.getWritableDatabase();
         this.context = context;
-        Log.i("Button", "DB start " + lecture_files_to_read[1]);
+
         readFromFiles();
-        Log.i("Button", "DB readed");
+
 
     }
 
@@ -38,9 +40,18 @@ public class DBManager {
         for (int i = 0; i < lecture_files_to_read.length; i++) {
             //Log.i("Button","Loop st " + lecture_files_to_read[i]);
             array_lectureparams = fr.readfile_dayLectures(lecture_files_to_read[i]);
-            Log.i("Button","Loop st2");
+
             fillDB_lectures(array_lectureparams, fr.array_size, mDatabase, lecture_table_names[i]);
         }
+
+        array_lectureparams = fr.readfile_dayLectures(subject_file);
+        fillDB_subjects(array_lectureparams,fr.array_size,mDatabase,LecturesEntry.TABLE_SUBJECT_LIST);
+
+        array_lectureparams = fr.readfile_dayLectures(login_file);
+        fillDB_login(array_lectureparams,fr.array_size,mDatabase,LecturesEntry.TABLE_LOGIN_LIST);
+
+
+
         mDatabase.close();
     }
 
@@ -91,7 +102,164 @@ public class DBManager {
 
     }
 
+    public void fillDB_subjects(String[][] array_lectureparams, int array_length, SQLiteDatabase mDatabase, String tablename){
+        if(array_lectureparams[0][1] == null){
+
+            return;
+        }
+
+        for (int i = 0; i < array_length; i++) {
+            //dbHelper.dropTables(mDatabase);
+            mDatabase = dbHelper.getWritableDatabase();
+
+            ContentValues cv = new ContentValues();
+
+            Log.i("Button" , "XXXX" + array_length);
+            String name = array_lectureparams[i][0].trim();
+            String teacher = array_lectureparams[i][1].trim();
+            String date = array_lectureparams[i][2].trim();
+            String group = array_lectureparams[i][3].trim();
+
+
+            cv.put(LecturesEntry.COLUMN_SUBJECT_NAME, name);
+            cv.put(LecturesEntry.COLUMN_SUBJECT_TEACHER, teacher);
+            cv.put(LecturesEntry.COLUMN_SUBJECT_DATE, date);
+            cv.put(LecturesEntry.COLUMN_SUBJECT_GROUP, group);
+
+
+            Log.i("Button" , "XXXXttable" + tablename);
+            mDatabase.insert(tablename, null, cv);
+            cv.clear();
+            mDatabase.close();
+
+        }
 
 
 
+    }
+
+    public void fillDB_login(String[][] array_lectureparams, int array_length, SQLiteDatabase mDatabase, String tablename){
+        if(array_lectureparams[0][1] == null){
+            return;
+        }
+
+
+
+        for (int i = 0; i < array_length; i++) {
+            mDatabase = dbHelper.getWritableDatabase();
+            //dbHelper.dropTables(mDatabase);
+            //dbHelper.onCreate(mDatabase);
+
+            ContentValues cv = new ContentValues();
+
+            String idcode = array_lectureparams[i][0].trim();
+            String pass = array_lectureparams[i][1].trim();
+            String mail = array_lectureparams[i][2].trim();
+            String name = array_lectureparams[i][3].trim();
+            String surname = array_lectureparams[i][4].trim();
+            String status = array_lectureparams[i][5].trim();
+
+
+            cv.put(LecturesEntry.COLUMN_LOGIN_IDCODE, idcode);
+            cv.put(LecturesEntry.COLUMN_LOGIN_PASS, pass);
+            cv.put(LecturesEntry.COLUMN_LOGIN_MAIL, mail);
+            cv.put(LecturesEntry.COLUMN_LOGIN_NAME, name);
+            cv.put(LecturesEntry.COLUMN_LOGIN_SURNAME, surname);
+            cv.put(LecturesEntry.COLUMN_LOGIN_STATUS, status);
+
+
+
+            mDatabase.insert(tablename, null, cv);
+            cv.clear();
+            mDatabase.close();
+
+        }
+
+
+    }
+
+
+    public void fillDB_homwork(String[] array,  String tablename){
+        if(array[1] == null){
+            return;
+        }
+
+
+            mDatabase = dbHelper.getWritableDatabase();
+            ContentValues cv = new ContentValues();
+
+            String subject = array[0].trim();
+            String content = array[1];
+            String deadline = array[2].trim();
+
+
+
+            cv.put(LecturesEntry.COLUMN_HOMEWORK_SUBJECT, subject);
+            cv.put(LecturesEntry.COLUMN_HOMEWORK_CONTENT, content);
+            cv.put(LecturesEntry.COLUMN_HOMEWORK_DEADLINE, deadline);
+
+
+
+
+
+
+            mDatabase.insert(tablename, null, cv);
+            cv.clear();
+            mDatabase.close();
+
+        }
+
+
+    public void fillDB_test(String[] array,String tablename){
+        if(array[1] == null){
+            return;
+        }
+
+
+        mDatabase = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        String subject = array[1].trim();
+        String content = array[2];
+        String deadline = array[3].trim();
+
+
+        cv.put(LecturesEntry.COLUMN_TEST_SUBJECT, subject);
+        cv.put(LecturesEntry.COLUMN_TEST_CONTENT, content);
+        cv.put(LecturesEntry.COLUMN_TEST_DEADLINE, deadline);
+
+
+
+
+
+
+
+        mDatabase.insert(tablename, null, cv);
+        cv.clear();
+        mDatabase.close();
+
+    }
+
+
+    public void fillDB_caller(String is, String tablename){
+        if(is == null){
+            return;
+        }
+
+
+        mDatabase = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(LecturesEntry.COLUMN_CALLER_CONTENT, is);
+
+
+        mDatabase.insert(tablename, null, cv);
+        cv.clear();
+        mDatabase.close();
+    }
 }
+
+
+
+
+

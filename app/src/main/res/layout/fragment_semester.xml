@@ -69,7 +69,7 @@
                     app:layout_constraintTop_toBottomOf="@id/semester_day1">
 
                     <ImageButton
-                        android:id="@id/button_lecture1_1"
+                        android:id="@id/button_popOutLecture1_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"
@@ -616,7 +616,7 @@
                     app:layout_constraintTop_toBottomOf="@id/semester_day2">
 
                     <ImageButton
-                        android:id="@id/button_lecture1_1"
+                        android:id="@id/button_popOutLecture1_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"
@@ -1163,7 +1163,7 @@
                     app:layout_constraintTop_toBottomOf="@id/semester_day1">
 
                     <ImageButton
-                        android:id="@id/button_lecture1_1"
+                        android:id="@id/button_popOutLecture1_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"
@@ -1710,7 +1710,7 @@
                     app:layout_constraintTop_toBottomOf="@id/semester_day1">
 
                     <ImageButton
-                        android:id="@id/button_lecture1_1"
+                        android:id="@id/button_popOutLecture1_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"
@@ -2257,7 +2257,7 @@
                     app:layout_constraintTop_toBottomOf="@id/semester_day1">
 
                     <ImageButton
-                        android:id="@id/button_lecture1_1"
+                        android:id="@id/button_popOutLecture1_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"

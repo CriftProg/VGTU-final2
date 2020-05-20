@@ -18,6 +18,8 @@ public class DisplayLectures {
     CalendarTime time;
     Cursor cursor;
 
+    int pop_count;
+
     DBManager dbm;
 
     boolean first_lec = true;
@@ -40,13 +42,12 @@ public class DisplayLectures {
 
     String[] columns = {LecturesEntry.COLUMN__LECTURE_NUMBER,LecturesEntry.COLUMN_LECTURE_NAME, LecturesEntry.COLUMN_LECTURE_WEEK, LecturesEntry.COLUMN_LECTURE_ROOM, LecturesEntry.COLUMN_LECTURE_START, LecturesEntry.COLUMN_LECTURE_END, LecturesEntry.COLUMN_LECTURE_HOMEWORK, LecturesEntry.COLUMN_LECTURE_TEST};
 
-    DisplayLectures(Context context){
+    DisplayLectures(Context context ,  SQLiteDatabase db){
         this.context = context;
-        context.deleteDatabase(LecturesEntry.DATABASE_NAME);
-        dbm = new DBManager(context);
-
+        this.db = db;
         LecturesDBHelper dbHelper = new LecturesDBHelper(context);
-        db = dbHelper.getReadableDatabase();
+        //db = dbHelper.getReadableDatabase();
+        //db.isOpen();
 
 
         }
@@ -263,11 +264,10 @@ public class DisplayLectures {
 
 
         Cursor cursor = db.query(table_name, columns, null,null,null,null,null);
-        Log.i("Button", "getAlldata db " + cursor.getCount());
-        StringBuffer buffer = new StringBuffer();
+
+
 
         int i = 0;
-        int j = 0;
         String [][] data = new String[100][15];
         while (cursor.moveToNext()){
 
@@ -311,6 +311,44 @@ public class DisplayLectures {
         //Log.i("Button", "Return Data " + data[i][3]);
         return data;
     }
+
+    public String[][] getPopData(String table_name, String[] columns){
+
+        Cursor cursor = db.query(table_name, columns, null,null,null,null,null);
+
+        int i = 0;
+        String[][] data = new String[100][15];
+        while (cursor.moveToNext()){
+
+
+            String subject_name  = cursor.getString(cursor.getColumnIndex(columns[0]));
+            String subject_teacher = cursor.getString(cursor.getColumnIndex(columns[1]));
+            String subject_date   = cursor.getString(cursor.getColumnIndex(columns[2]));
+            String subject_group  = cursor.getString(cursor.getColumnIndex(columns[3]));
+
+            Log.i("Button", "subject " + subject_name);
+
+            data[i] = new String[]{subject_name,
+                    subject_teacher,
+                    subject_date,
+                    subject_group  };
+            i++;
+            }
+        pop_count = i;
+
+        return data;
+    }
+
+    public String getCaller(String table_name, String[] columns){
+        Cursor cursor = db.query(table_name, columns, null,null,null,null,null);
+        String caller = new String();
+        while (cursor.moveToNext()) {
+             caller = cursor.getString(cursor.getColumnIndex(columns[0]));
+        }
+        return caller;
+
+    }
+
 
     public int howManyLectures(String table_name, String[] columns, int week){
         Cursor cursor = db.query(table_name, columns, null,null,null,null,null);
