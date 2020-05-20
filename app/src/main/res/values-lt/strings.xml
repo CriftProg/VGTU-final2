@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">VGTU-final</string>
 
-    <string name="menu_lectures">Lectures</string>
-    <string name="menu_exam">Exams</string>
-    <string name="menu_labs">Labs</string>
-    <string name="menu_options">Options</string>
-    <string name="menu_help">Help</string>
-    <string name="menu_logOut">Log Out</string>
-    <string name="menu_headline">Additional</string>
-    <string name="menu_chatbot">Chat</string>
-    <string name="menu_homework">Homework</string>
-    <string name="menu_results">Results</string>
+    <string name="menu_lectures">Pamokai</string>
+    <string name="menu_exam">Examinai</string>
+    <string name="menu_labs">Lab</string>
+    <string name="menu_options">Nustatymai</string>
+    <string name="menu_help">Pagalba</string>
+    <string name="menu_logOut">Iseiti</string>
+    <string name="menu_headline">Daugiau</string>
+    <string name="menu_chatbot">Chatatas</string>
+    <string name="menu_homework">Namudarbai</string>
+    <string name="menu_results">Resultatai</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -20,16 +20,16 @@
 
 
 
-    <string name="dasboard_index">Dashboard</string>
-    <string name="tomorrow_index">Tomorrow</string>
-    <string name="semester_index">Semester</string>
-    <string name="dashboard_currentDay">Monday</string>
+    <string name="dasboard_index">Pamokai siandien</string>
+    <string name="tomorrow_index">Rytoj</string>
+    <string name="semester_index">Semestras</string>
+    <string name="dashboard_currentDay">Pirmadianis</string>
 
-    <string name="semester_monday">Monday</string>
-    <string name="semester_tuesday">Monday</string>
-    <string name="semester_wednesday">Monday</string>
-    <string name="semester_thursday">Monday</string>
-    <string name="semester_friday">Monday</string>
+    <string name="semester_monday">   Pirmadianis  </string>
+    <string name="semester_tuesday">  Antradienis  </string>
+    <string name="semester_wednesday">Treciadienis  </string>
+    <string name="semester_thursday"> Ketvirtadienis </string>
+    <string name="semester_friday">   Penktadienis   </string>
 
 
     <string name="lecture_number">Lecture Number</string>
@@ -40,24 +40,24 @@
 
 
 
-    <string name="dayOfWeek_1">Monday</string>
-    <string name="dayOfWeek_2">Tuesday</string>
-    <string name="dayOfWeek_3">Wednesday</string>
-    <string name="dayOfWeek_4">Thursday</string>
-    <string name="dayOfWeek_5">Friday</string>
-    <string name="dayOfWeek_6">Saturday</string>
-    <string name="dayOfWeek_7">Sunday</string>
+    <string name="dayOfWeek_1">Pirmadianis</string>
+    <string name="dayOfWeek_2">Antradienis</string>
+    <string name="dayOfWeek_3">Treciadienis</string>
+    <string name="dayOfWeek_4">Ketvirtadienis</string>
+    <string name="dayOfWeek_5">Penktadienis</string>
+    <string name="dayOfWeek_6">Sestadienis</string>
+    <string name="dayOfWeek_7">Sekmadienis</string>
 
 
-    <string name="nolecture">No lectures</string>
+    <string name="nolecture">Nere pamoku</string>
 
     <string name="pop_title">Subjcet name</string>
-    <string name="pop_teacher">Teacher :</string>
-    <string name="pop_addhome">Add homework</string>
-    <string name="pop_addtest">Add test</string>
-    <string name="pop_date">Subject date :</string>
-    <string name="pop_group">Group :</string>
-    <string name="pop_input">Input info :</string>
+    <string name="pop_teacher">Lektorius :</string>
+    <string name="pop_addhome">Ideti Namudarbai</string>
+    <string name="pop_addtest">Ideti testa</string>
+    <string name="pop_date">Pamaku data :</string>
+    <string name="pop_group">Grupe :</string>
+    <string name="pop_input">Ivesti :</string>
     <string name="pop_inputContent">Enter content</string>
     <string name="pop_inputDate">Enter date</string>
 
